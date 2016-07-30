@@ -5,6 +5,8 @@
     expressions: how to display values
     filters: | filter:options, -price (descending)
     ng-src: so expr evals before getting img
+    ng-class: conditionally applies if call returns true
+    ng-click: call controller function to set properties etc.
 -->
 
 <!DOCTYPE html>
@@ -21,29 +23,52 @@
 <body ng-controller="StoreController as store">
 <div class="container">
 
+    <h1>Flatlander Gem Store</h1>
+
+    <!-- PRODUCTS LIST -->
     <ul class='list-group'>
+
         <li class='list-group-item flex-container' ng-repeat="product in store.products | orderBy:'price'" ng-hide='product.soldOut'>
-            <img class='flex-item' ng-src="{{product.images[0]}}" />
+
+            <!-- IMAGE -->
+            <div id='image-div' class="flex-item">
+                <img id='product-image' class='flex-item' ng-src="{{product.images[0]}}" />
+            </div>
+
+            <!-- TEXT -->
             <div class="flex-item">
-                <h3>{{product.name}}
-                    <span class='pull-right'>{{product.price | currency}}</span>
-                </h3>
-                <p>{{product.description}}
-                    <button class='pull-right' ng-show='product.canPurchase'>Add to Cart</button>
-                </p>
+                <h3>{{product.name}}</h3>
+                <button class='pull-right' ng-show='product.canPurchase'>Add to Cart</button>
+                <p>{{product.price | currency}}</p>
+
+                <!-- PANELS NAV -->
+                <section ng-controller='PanelController as panel'>
+                    <ul class='nav nav-pills clear-both'>
+                        <!-- apply active class if tab === x -->
+                        <li ng-class='{active:panel.isSet(1)}'><a href="#" ng-click='panel.setTab(1)'>Description</a></li>
+                        <li ng-class='{active:panel.isSet(2)}'><a href="#" ng-click='panel.setTab(2)'>Specification</a></li>
+                        <li ng-class='{active:panel.isSet(3)}'><a href="#" ng-click='panel.setTab(3)'>Reviews</a></li>
+                    </ul>
+
+                    <!-- PANELS -->
+                    <!-- show panel if isSet returns T -->
+                    <div class="panel" ng-show='panel.isSet(1)'>
+                        <!-- <h4>Description</h4> -->
+                        <p>{{product.description}}</p>
+                    </div>
+                    <div class="panel" ng-show='panel.isSet(2)'>
+                        <!-- <h4>Description</h4> -->
+                        <p>{{product.description}}</p>
+                    </div>
+                    <div class="panel" ng-show='panel.isSet(3)'>
+                        <!-- <h4>Description</h4> -->
+                        <p>{{product.description}}</p>
+                    </div>
+                </section>
             </div>
 
         </li>
     </ul>
-
-
-
-    <!-- <div ng-repeat='product in store.products' class="product row" ng-hide='product.soldOut'>
-
-        <h3>{{product.name}}</h3>
-        <h4>{{product.price}}</h4>
-        <button ng-show='product.canPurchase'>Add to Cart</button>
-    </div> -->
 
 </div>
 </body>
