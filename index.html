@@ -1,3 +1,12 @@
+<!--
+    ANGULAR NOTES
+    directives: html annotations that trigger js
+    controllers: add behavior
+    expressions: how to display values
+    filters: | filter:options, -price (descending)
+    ng-src: so expr evals before getting img
+-->
+
 <!DOCTYPE html>
 <html ng-app='gemStore'>
 <head>
@@ -10,13 +19,32 @@
 </head>
 
 <body ng-controller="StoreController as store">
-    <div class="container">
-        <div class="product row">
-            <h3>{{store.product.name}}
-                <!-- <em class='pull-right'></em> -->
+<div class="container">
 
-            </h3>
-        </div>
-    </div>
+    <ul class='list-group'>
+        <li class='list-group-item flex-container' ng-repeat="product in store.products | orderBy:'price'" ng-hide='product.soldOut'>
+            <img class='flex-item' ng-src="{{product.images[0]}}" />
+            <div class="flex-item">
+                <h3>{{product.name}}
+                    <span class='pull-right'>{{product.price | currency}}</span>
+                </h3>
+                <p>{{product.description}}
+                    <button class='pull-right' ng-show='product.canPurchase'>Add to Cart</button>
+                </p>
+            </div>
+
+        </li>
+    </ul>
+
+
+
+    <!-- <div ng-repeat='product in store.products' class="product row" ng-hide='product.soldOut'>
+
+        <h3>{{product.name}}</h3>
+        <h4>{{product.price}}</h4>
+        <button ng-show='product.canPurchase'>Add to Cart</button>
+    </div> -->
+
+</div>
 </body>
 </html>
