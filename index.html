@@ -53,17 +53,51 @@
                     <!-- PANELS -->
                     <!-- show panel if isSet returns T -->
                     <div class="panel" ng-show='panel.isSet(1)'>
-                        <!-- <h4>Description</h4> -->
                         <p>{{product.description}}</p>
                     </div>
                     <div class="panel" ng-show='panel.isSet(2)'>
-                        <!-- <h4>Description</h4> -->
                         <p>{{product.description}}</p>
                     </div>
+
+                    <!-- REVIEWS -->
                     <div class="panel" ng-show='panel.isSet(3)'>
-                        <!-- <h4>Description</h4> -->
-                        <p>{{product.description}}</p>
+                        <blockquote ng-repeat='review in product.reviews'>
+                            <p>{{review.stars}} Stars</p>
+                            <p>{{review.body}}</p>
+                            <cite>-{{review.author}}</cite>
+                        </blockquote>
+
+                        <!-- FORM -->
+                        <form name='reviewForm'>
+                            <!-- LIVE PREVIEW -->
+                            <blockquote>
+                                <strong> Stars</strong>
+
+                                <cite class='clearfix'>-</cite>
+                            </blockquote>
+
+                            <!-- INPUT FORM  -->
+                            <h4>Submit a Review</h4>
+                            <fieldset class='form-group'>
+                                <select ng-model='review.stars' ng-class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
+                                    <option value=''>Rate the Product</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <textarea  ng-model='review.body' autofocus=""class='form-control' placeholder='Write a short review...' title='Review'></textarea>
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <input ng-model='review.author' type="email" class='form-control' placeholder='email@email.com' title='Email'>
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <input type="submit" class='btn btn-primary pull-right' value="Submit">
+                            </fieldset>
+
+
+                        </form>
+
                     </div>
+
                 </section>
             </div>
 

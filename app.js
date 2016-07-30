@@ -23,7 +23,7 @@
     });
 
     // gallery controller
-    
+
 
     // data object
     var gems = [
@@ -35,6 +35,17 @@
             soldOut: false,
             images: [
                 'images/Ruby_logo.png'
+            ],
+            reviews: [
+                {
+                    stars: 5,
+                    body: "I love this product so much.",
+                    author: 'adam@adam.com'
+                },{
+                    stars: 5,
+                    body: "I love this product so much.",
+                    author: 'adam@adam.com'
+                }
             ]
         },{
             name: 'Beach Rock',
@@ -44,6 +55,17 @@
             soldOut: false,
             images: [
                 'images/Ruby_logo.png'
+            ],
+            reviews: [
+                {
+                    stars: 5,
+                    body: "I love this product so much.",
+                    author: 'adam@adam.com'
+                },{
+                    stars: 5,
+                    body: "I love this product so much.",
+                    author: 'adam@adam.com'
+                }
             ]
         }, {
             name: 'Diamond',
@@ -53,6 +75,17 @@
             soldOut: false,
             images: [
                 'images/Ruby_logo.png'
+            ],
+            reviews: [
+                {
+                    stars: 5,
+                    body: "I love this product so much.",
+                    author: 'adam@adam.com'
+                },{
+                    stars: 5,
+                    body: "I love this product so much.",
+                    author: 'adam@adam.com'
+                }
             ]
         }
     ];
