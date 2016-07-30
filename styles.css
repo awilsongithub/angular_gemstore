@@ -1,5 +1,5 @@
 .container {
-    width: 50%;
+    width: 575px;
     margin: auto;
 }
 .list-group-item {
@@ -12,11 +12,11 @@
     display: flex;
 }
 .flex-item {
-    width: 75%; /* so fills out parent */
+    width: 500px; /* so fills out parent */
 }
 /*size the image container not img to maintain aspect ratio */
 #image-div {
-    width: 15%;
+    width: 75px;
 }
 #product-image {
     display: block;
@@ -24,9 +24,31 @@
     padding: 20px 20px 5px 0px;
 }
 .nav-pills li a {
+    /* pad a not li so whole tab clickable */
     padding: 10px 5px 10px 5px;
-    margin-right: 10px;
+    border-radius: 4px 4px 0px 0px;
+    /*margin-right: 10px;*/
 }
 .clear-both {
     clear: both;
+}
+.nav-pills li {
+    /*display: inline;*/
+    border: solid;
+    border-radius: 4px 4px 0px 0px;
+    border-width: 1px 1px 0 1px;
+    margin: 0 5px 0 0;
+}
+/*.tabs:active {
+    background: orange;
+}*/
+.panel {
+    border-top: 1px solid lightgrey;
+}
+.panel p {
+    margin-top: 10px;
+}
+.panel:active {
+    padding-bottom: 1px;
+    background: lightgrey;
 }
