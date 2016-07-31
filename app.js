@@ -22,7 +22,16 @@
         };
     });
 
-    // gallery controller
+    // controller to handle review data, form submissions
+    app.controller('ReviewController', function(){
+        this.review = {};
+        // pass product (gem) object so we can push onto reviews array
+        this.addReview = function(product){
+            this.review.createdOn = Date.now();
+            product.reviews.push(this.review);
+            this.review = {}; // clear form
+        };
+    });
 
 
     // data object

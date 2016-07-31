@@ -27,21 +27,19 @@
 
     <!-- PRODUCTS LIST -->
     <ul class='list-group'>
-
         <li class='list-group-item flex-container' ng-repeat="product in store.products | orderBy:'price'" ng-hide='product.soldOut'>
 
             <!-- IMAGE -->
             <div id='image-div' class="flex-item">
                 <img id='product-image' class='flex-item' ng-src="{{product.images[0]}}" />
             </div>
-
             <!-- TEXT -->
             <div class="flex-item">
                 <h3>{{product.name}}</h3>
                 <button class='pull-right' ng-show='product.canPurchase'>Add to Cart</button>
                 <p>{{product.price | currency}}</p>
 
-                <!-- PANELS NAV -->
+                <!-- TAB NAVIGATION -->
                 <section ng-controller='PanelController as panel'>
                     <ul class='nav nav-pills clear-both'>
                         <!-- apply active class if tab === x -->
@@ -50,7 +48,7 @@
                         <li ng-class='{active:panel.isSet(3)}'><a class='tabs' href="#" ng-click='panel.setTab(3)'>Reviews</a></li>
                     </ul>
 
-                    <!-- PANELS -->
+                    <!-- TABS (CONTENT) -->
                     <!-- show panel if isSet returns T -->
                     <div class="panel" ng-show='panel.isSet(1)'>
                         <p>{{product.description}}</p>
@@ -59,39 +57,43 @@
                         <p>{{product.description}}</p>
                     </div>
 
-                    <!-- REVIEWS -->
+                    <!-- REVIEWS TAB -->
                     <div class="panel" ng-show='panel.isSet(3)'>
+                        <!-- ACTUAL REVIEWS -->
                         <blockquote ng-repeat='review in product.reviews'>
-                            <p>{{review.stars}} Stars</p>
-                            <p>{{review.body}}</p>
-                            <cite>-{{review.author}}</cite>
+                            <strong>{{review.stars}} Stars</strong>
+                            {{review.body}}
+                            <cite class='clearfix'>- {{review.author}} on {{review.createdOn | date }}</cite>
                         </blockquote>
 
-                        <!-- FORM -->
-                        <form name='reviewForm'>
+                        <!-- REVIEW FORM -->
+                        <!-- submit only if $valid === true -->
+                        <form name='reviewForm' ng-controller='ReviewController as reviewCtrl' ng-submit='reviewForm.$valid && reviewCtrl.addReview(product)' novalidate>
+
                             <!-- LIVE PREVIEW -->
                             <blockquote>
-                                <strong> Stars</strong>
-
-                                <cite class='clearfix'>-</cite>
+                                <strong> {{reviewCtrl.review.stars}} Stars</strong>
+                                {{reviewCtrl.review.body}}
+                                <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
                             </blockquote>
 
-                            <!-- INPUT FORM  -->
+                            <!-- INPUTS -->
                             <h4>Submit a Review</h4>
                             <fieldset class='form-group'>
-                                <select ng-model='review.stars' ng-class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
+                                <select required ng-model='reviewCtrl.review.stars' ng-class='form-control' class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
                                     <option value=''>Rate the Product</option>
                                 </select>
                             </fieldset>
                             <fieldset class='form-group'>
-                                <textarea  ng-model='review.body' autofocus=""class='form-control' placeholder='Write a short review...' title='Review'></textarea>
+                                <textarea  required ng-model='reviewCtrl.review.body' autofocus="" class='form-control' placeholder='Write a short review...' title='Review'></textarea>
                             </fieldset>
                             <fieldset class='form-group'>
-                                <input ng-model='review.author' type="email" class='form-control' placeholder='email@email.com' title='Email'>
+                                <input required ng-model='reviewCtrl.review.author' type="email" class='form-control' placeholder='email@email.com' title='Email'>
                             </fieldset>
                             <fieldset class='form-group'>
                                 <input type="submit" class='btn btn-primary pull-right' value="Submit">
                             </fieldset>
+                            <div>Form ready to submit: {{reviewForm.$valid}}</div>
 
 
                         </form>
