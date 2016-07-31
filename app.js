@@ -33,6 +33,15 @@
         };
     });
 
+    // custom directive used like an include/mixin
+    // a function placing a template html file into html
+    app.directive('productDescription', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'product-description.html'
+        };
+    });
+
 
     // data object
     var gems = [

@@ -7,6 +7,8 @@
     ng-src: so expr evals before getting img
     ng-class: conditionally applies if call returns true
     ng-click: call controller function to set properties etc.
+    cross-origin error: when loading templates: fix by serving files using: python -m SimpleHTTPServer command.
+
 -->
 
 <!DOCTYPE html>
@@ -48,16 +50,24 @@
                         <li ng-class='{active:panel.isSet(3)}'><a class='tabs' href="#" ng-click='panel.setTab(3)'>Reviews</a></li>
                     </ul>
 
-                    <!-- TABS (CONTENT) -->
+                    <!-- PRODUCT TABS/PANELS (CONTENT) -->
                     <!-- show panel if isSet returns T -->
-                    <div class="panel" ng-show='panel.isSet(1)'>
+
+                    <!-- DESCRIPTION PANEL -->
+                    <!-- rendered with a custom elment directive -->
+                    <product-description ng-show='panel.isSet(1)'>
+                    </product-description>
+                    <!-- panel html moved to template... -->
+                    <!-- <div class="panel" ng-show='panel.isSet(1)'>
                         <p>{{product.description}}</p>
-                    </div>
+                    </div> -->
+
+                    <!-- SPECS PANEL -->
                     <div class="panel" ng-show='panel.isSet(2)'>
                         <p>{{product.description}}</p>
                     </div>
 
-                    <!-- REVIEWS TAB -->
+                    <!-- REVIEWS PANEL -->
                     <div class="panel" ng-show='panel.isSet(3)'>
                         <!-- ACTUAL REVIEWS -->
                         <blockquote ng-repeat='review in product.reviews'>
@@ -70,14 +80,14 @@
                         <!-- submit only if $valid === true -->
                         <form name='reviewForm' ng-controller='ReviewController as reviewCtrl' ng-submit='reviewForm.$valid && reviewCtrl.addReview(product)' novalidate>
 
-                            <!-- LIVE PREVIEW -->
+                            <!-- FORM: LIVE PREVIEW -->
                             <blockquote>
                                 <strong> {{reviewCtrl.review.stars}} Stars</strong>
                                 {{reviewCtrl.review.body}}
                                 <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
                             </blockquote>
 
-                            <!-- INPUTS -->
+                            <!-- FORM: INPUT ELEMENTS -->
                             <h4>Submit a Review</h4>
                             <fieldset class='form-group'>
                                 <select required ng-model='reviewCtrl.review.stars' ng-class='form-control' class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
@@ -94,7 +104,6 @@
                                 <input type="submit" class='btn btn-primary pull-right' value="Submit">
                             </fieldset>
                             <div>Form ready to submit: {{reviewForm.$valid}}</div>
-
 
                         </form>
 
