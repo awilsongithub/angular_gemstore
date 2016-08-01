@@ -19,13 +19,26 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src='angular.min.js'></script>
+    <script type="text/javascript" src='jquery-1.6.2.min.js'></script>
     <script type="text/javascript" src='app.js'></script>
+    <script type="text/javascript" src='scripts.js'></script>
 </head>
 
 <body ng-controller="StoreController as store">
-<div class="container">
 
-    <h1>Flatlander Gem Store</h1>
+<!-- NAVIGATION WITH SEARCH BOXES -->
+<nav role="navigation">
+  <div class="container">
+     <h1>Flatlander Gem Store</h1>
+     <fieldset class='form-group'>
+         <input id='nav-search' type="text" class='form-control' placeholder='Search for gems...'>
+         <input id='nav-search-go' type="submit" class='btn btn-primary' value="Go">
+     </fieldset>
+  </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
 
     <!-- PRODUCTS LIST -->
     <ul class='list-group'>
@@ -38,7 +51,7 @@
             <!-- TEXT -->
             <div class="flex-item">
                 <h3>{{product.name}}</h3>
-                <button class='pull-right' ng-show='product.canPurchase'>Add to Cart</button>
+                <button id='add-to-cart-btn' class='pull-right btn' ng-show='product.canPurchase'>Add to Cart</button>
                 <p>{{product.price | currency}}</p>
 
                 <!-- TAB NAVIGATION -->
@@ -76,32 +89,39 @@
                             <cite class='clearfix'>- {{review.author}} on {{review.createdOn | date }}</cite>
                         </blockquote>
 
+                        <!-- BUTTON TO SHOW REVIEW FORM -->
+                        <button id='show-form' name="button" class='btn btn-primary'>Write a Review</button>
+
                         <!-- REVIEW FORM -->
                         <!-- submit only if $valid === true -->
-                        <form name='reviewForm' ng-controller='ReviewController as reviewCtrl' ng-submit='reviewForm.$valid && reviewCtrl.addReview(product)' novalidate>
+                        <form id='review-form' name='reviewForm' ng-controller='ReviewController as reviewCtrl' ng-submit='reviewForm.$valid && reviewCtrl.addReview(product)' novalidate>
 
                             <!-- FORM: LIVE PREVIEW -->
-                            <blockquote>
-                                <strong> {{reviewCtrl.review.stars}} Stars</strong>
-                                {{reviewCtrl.review.body}}
-                                <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
-                            </blockquote>
+                            <div class="live-preview">
+                                <strong>Live Preview</strong>
+                                <blockquote>
+                                    <strong> {{reviewCtrl.review.stars}} Stars</strong>
+                                    {{reviewCtrl.review.body}}
+                                    <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
+                                </blockquote>
+                            </div>
 
                             <!-- FORM: INPUT ELEMENTS -->
-                            <h4>Submit a Review</h4>
+                            <!-- <h4>Submit a Review</h4> -->
                             <fieldset class='form-group'>
                                 <select required ng-model='reviewCtrl.review.stars' ng-class='form-control' class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
                                     <option value=''>Rate the Product</option>
                                 </select>
                             </fieldset>
                             <fieldset class='form-group'>
-                                <textarea  required ng-model='reviewCtrl.review.body' autofocus="" class='form-control' placeholder='Write a short review...' title='Review'></textarea>
+                                <textarea  required ng-model='reviewCtrl.review.body' autofocus="" class='form-control' placeholder='Write a few words...' title='Review'></textarea>
                             </fieldset>
                             <fieldset class='form-group'>
-                                <input required ng-model='reviewCtrl.review.author' type="email" class='form-control' placeholder='email@email.com' title='Email'>
+                                <input required ng-model='reviewCtrl.review.author' type="email" class='form-control' placeholder='YourEmail@Something.com' title='Email'>
                             </fieldset>
                             <fieldset class='form-group'>
                                 <input type="submit" class='btn btn-primary pull-right' value="Submit">
+                                <input id='cancel-review' type="button" class='btn pull-right' value="Cancel">
                             </fieldset>
                             <div>Form ready to submit: {{reviewForm.$valid}}</div>
 

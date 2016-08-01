@@ -55,6 +55,9 @@
 blockquote {
     font-size: 14px;
     margin-bottom: 0px;
+    padding-left: 10px;
+    border-left: 0px;
+    border-bottom: 1px solid lightgrey;
 }
 /* feedback: input has content but not $valid */
 .ng-dirty.ng-invalid {
@@ -63,4 +66,57 @@ blockquote {
 /* feedback: input has content and it's valid */
 .ng-dirty.ng-valid {
     border-color: #78FA89;
+}
+#review-form {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 10px;
+}
+.live-preview {
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#cancel-review {
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+#cancel-review:hover {
+    background-color: lightgrey;
+}
+#show-form {
+    margin: 10px;
+}
+#add-to-cart-btn {
+    background-color: #FFC800;
+    border: 1px solid #b56861;
+}
+#add-to-cart-btn:hover {
+    background-color: #e5c860;
+}
+nav {
+    background-color: #232F3E;
+    color: white;
+    padding-bottom: 10px;
+}
+nav input {
+    float: left;
+}
+#nav-search {
+    width: 50%;
+    margin-right: 0px;
+    border-radius: 4px 0px 0px 4px;
+    border: 1px solid #b56861;
+    border-right: 0px;
+}
+#nav-search-go {
+    background-color: #FFC800;
+    color: #232F3E;
+    border-radius: 0px 4px 4px 0px;
+    margin-right: -20px;
+    border: 1px solid #b56861;
+    border-left: 0px;
 }
