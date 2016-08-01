@@ -93,6 +93,7 @@ blockquote {
 #add-to-cart-btn {
     background-color: #FFC800;
     border: 1px solid #b56861;
+    margin-top: 20px;
 }
 #add-to-cart-btn:hover {
     background-color: #e5c860;
@@ -119,4 +120,7 @@ nav input {
     margin-right: -20px;
     border: 1px solid #b56861;
     border-left: 0px;
+}
+#product-price {
+    clear: both;
 }

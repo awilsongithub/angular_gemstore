@@ -9,19 +9,6 @@
         this.products = gems;
     });
 
-    // panel controller
-    app.controller('PanelController', function(){
-        this.tab = 1;
-        // set the tab
-        this.setTab = function(setTab){
-            this.tab = setTab;
-        };
-        // check if selected
-        this.isSet = function(isSet){
-            return this.tab === isSet;
-        };
-    });
-
     // controller to handle review data, form submissions
     app.controller('ReviewController', function(){
         this.review = {};
@@ -42,6 +29,45 @@
         };
     });
 
+    // custom attribute directive for specs
+    app.directive('productSpecs', function(){
+        return {
+            restrict: 'A',
+            templateUrl: 'product-specs.html'
+        };
+    });
+
+    // panel controller (moved into directive)
+    // app.controller('PanelController', function(){
+    //     this.tab = 1;
+    //     this.setTab = function(setTab){
+    //         this.tab = setTab;
+    //     };
+    //     this.isSet = function(isSet){
+    //         return this.tab === isSet;
+    //     };
+    // });
+
+    // productPanels directive
+    app.directive('productPanels', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'product-panels.html',
+            controller: function(){
+                this.tab = 1;
+                // set the tab
+                this.setTab = function(setTab){
+                    this.tab = setTab;
+                };
+                // check if selected
+                this.isSet = function(isSet){
+                    return this.tab === isSet;
+                };
+            },
+            controllerAs: 'panel'
+        };
+    });
+
 
     // data object
     var gems = [
@@ -51,6 +77,10 @@
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
             canPurchase: false,
             soldOut: false,
+            shine: 8,
+            faces: 14,
+            rarity: 7,
+            color: "#CCC",
             images: [
                 'images/Ruby_logo.png'
             ],
@@ -71,6 +101,10 @@
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
             canPurchase: true,
             soldOut: false,
+            shine: 8,
+            faces: 14,
+            rarity: 7,
+            color: "#CCC",
             images: [
                 'images/Ruby_logo.png'
             ],
@@ -91,6 +125,10 @@
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
             canPurchase: true,
             soldOut: false,
+            shine: 8,
+            faces: 14,
+            rarity: 7,
+            color: "#CCC",
             images: [
                 'images/Ruby_logo.png'
             ],

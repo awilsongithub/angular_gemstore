@@ -8,6 +8,7 @@
     ng-class: conditionally applies if call returns true
     ng-click: call controller function to set properties etc.
     cross-origin error: when loading templates: fix by serving files using: python -m SimpleHTTPServer command.
+    directives with templates and controllers: 1.remove html to sep. template.html 2.replace it w custom directive tag referencing the directive. 3.write app.directive on js module including templateUrl, controller (as anonymous function) and controllerAs property with alias name.
 
 -->
 
@@ -50,86 +51,13 @@
             </div>
             <!-- TEXT -->
             <div class="flex-item">
-                <h3>{{product.name}}</h3>
+                <h3 class='pull-left'>{{product.name}}</h3>
                 <button id='add-to-cart-btn' class='pull-right btn' ng-show='product.canPurchase'>Add to Cart</button>
-                <p>{{product.price | currency}}</p>
+                <p id='product-price'>{{product.price | currency}}</p>
 
-                <!-- TAB NAVIGATION -->
-                <section ng-controller='PanelController as panel'>
-                    <ul class='nav nav-pills clear-both'>
-                        <!-- apply active class if tab === x -->
-                        <li ng-class='{active:panel.isSet(1)}'><a class='tabs' href="#" ng-click='panel.setTab(1)'>Description</a></li>
-                        <li ng-class='{active:panel.isSet(2)}'><a class='tabs' href="#" ng-click='panel.setTab(2)'>Specification</a></li>
-                        <li ng-class='{active:panel.isSet(3)}'><a class='tabs' href="#" ng-click='panel.setTab(3)'>Reviews</a></li>
-                    </ul>
+                <!-- PANEL/TAB NAVIGATION -->
+                <product-panels></product-panels>
 
-                    <!-- PRODUCT TABS/PANELS (CONTENT) -->
-                    <!-- show panel if isSet returns T -->
-
-                    <!-- DESCRIPTION PANEL -->
-                    <!-- rendered with a custom elment directive -->
-                    <product-description ng-show='panel.isSet(1)'>
-                    </product-description>
-                    <!-- panel html moved to template... -->
-                    <!-- <div class="panel" ng-show='panel.isSet(1)'>
-                        <p>{{product.description}}</p>
-                    </div> -->
-
-                    <!-- SPECS PANEL -->
-                    <div class="panel" ng-show='panel.isSet(2)'>
-                        <p>{{product.description}}</p>
-                    </div>
-
-                    <!-- REVIEWS PANEL -->
-                    <div class="panel" ng-show='panel.isSet(3)'>
-                        <!-- ACTUAL REVIEWS -->
-                        <blockquote ng-repeat='review in product.reviews'>
-                            <strong>{{review.stars}} Stars</strong>
-                            {{review.body}}
-                            <cite class='clearfix'>- {{review.author}} on {{review.createdOn | date }}</cite>
-                        </blockquote>
-
-                        <!-- BUTTON TO SHOW REVIEW FORM -->
-                        <button id='show-form' name="button" class='btn btn-primary'>Write a Review</button>
-
-                        <!-- REVIEW FORM -->
-                        <!-- submit only if $valid === true -->
-                        <form id='review-form' name='reviewForm' ng-controller='ReviewController as reviewCtrl' ng-submit='reviewForm.$valid && reviewCtrl.addReview(product)' novalidate>
-
-                            <!-- FORM: LIVE PREVIEW -->
-                            <div class="live-preview">
-                                <strong>Live Preview</strong>
-                                <blockquote>
-                                    <strong> {{reviewCtrl.review.stars}} Stars</strong>
-                                    {{reviewCtrl.review.body}}
-                                    <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
-                                </blockquote>
-                            </div>
-
-                            <!-- FORM: INPUT ELEMENTS -->
-                            <!-- <h4>Submit a Review</h4> -->
-                            <fieldset class='form-group'>
-                                <select required ng-model='reviewCtrl.review.stars' ng-class='form-control' class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
-                                    <option value=''>Rate the Product</option>
-                                </select>
-                            </fieldset>
-                            <fieldset class='form-group'>
-                                <textarea  required ng-model='reviewCtrl.review.body' autofocus="" class='form-control' placeholder='Write a few words...' title='Review'></textarea>
-                            </fieldset>
-                            <fieldset class='form-group'>
-                                <input required ng-model='reviewCtrl.review.author' type="email" class='form-control' placeholder='YourEmail@Something.com' title='Email'>
-                            </fieldset>
-                            <fieldset class='form-group'>
-                                <input type="submit" class='btn btn-primary pull-right' value="Submit">
-                                <input id='cancel-review' type="button" class='btn pull-right' value="Cancel">
-                            </fieldset>
-                            <div>Form ready to submit: {{reviewForm.$valid}}</div>
-
-                        </form>
-
-                    </div>
-
-                </section>
             </div>
 
         </li>
