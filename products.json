@@ -1,4 +1,4 @@
-
+[
 {
     "name": "Azurite",
     "price": 4.95,
@@ -97,7 +97,7 @@
     ]
 }, {
     "name": "Meteorite",
-    "price": .95,
+    "price": 1.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     "canPurchase": false,
     "soldOut": false,
@@ -120,3 +120,4 @@
         }
     ]
 }
+]

@@ -1,33 +1,37 @@
 <!-- submit only if $valid === true -->
 <form id='review-form' name='reviewForm' ng-controller='ReviewController as reviewCtrl' ng-submit='reviewForm.$valid && reviewCtrl.addReview(product)' novalidate>
 
-    <!-- FORM: LIVE PREVIEW -->
-    <div class="live-preview">
-        <strong>Live Preview</strong>
-        <blockquote>
-            <strong> {{reviewCtrl.review.stars}} Stars</strong>
-            {{reviewCtrl.review.body}}
-            <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
-        </blockquote>
-    </div>
-
     <!-- FORM: INPUT ELEMENTS -->
     <!-- <h4>Submit a Review</h4> -->
     <fieldset class='form-group'>
-        <select required ng-model='reviewCtrl.review.stars' ng-class='form-control' class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars'>
+        <select  required ng-model='reviewCtrl.review.stars' ng-class='form-control' class='form-control' ng-options='stars for stars in [5,4,3,2,1]' title='Stars' autofocus>
             <option value=''>Rate the Product</option>
         </select>
     </fieldset>
     <fieldset class='form-group'>
-        <textarea  required ng-model='reviewCtrl.review.body' autofocus="" class='form-control' placeholder='Write a few words...' title='Review'></textarea>
+        <textarea  required ng-model='reviewCtrl.review.body'  class='form-control' placeholder='Write a few words...' title='Review'></textarea>
     </fieldset>
     <fieldset class='form-group'>
         <input required ng-model='reviewCtrl.review.author' type="email" class='form-control' placeholder='YourEmail@Something.com' title='Email'>
     </fieldset>
+    <div>Form ready to submit: {{reviewForm.$valid}}</div>
     <fieldset class='form-group'>
         <input type="submit" ng-click='form.setShow(false)' class='btn btn-primary pull-right' value="Submit">
         <input id='cancel-review' ng-click='form.setShow(false)' type="button" class='btn pull-right' value="Cancel">
     </fieldset>
-    <div>Form ready to submit: {{reviewForm.$valid}}</div>
+
+
+    <!-- FORM: LIVE PREVIEW -->
+    <fieldset>
+        <div class="live-preview">
+            <strong>Live Preview</strong>
+            <blockquote>
+                <strong> {{reviewCtrl.review.stars}} Stars</strong>
+                {{reviewCtrl.review.body}}
+                <cite class='clearfix'>- {{reviewCtrl.review.author}} on {{reviewCtrl.review.createdOn | date }}</cite>
+            </blockquote>
+        </div>
+    </fieldset>
+
 
 </form>
