@@ -11,12 +11,6 @@
             console.log(data);
             store.products = data;
         });
-        // $http({
-        //     method: 'GET',
-        //     url: 'products.json'
-        // }).success(function(data){
-        //     console.log(data);
-        // });
     }]);
 
     // controller to handle review data, form submissions

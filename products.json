@@ -3,14 +3,14 @@
     "name": "Azurite",
     "price": 4.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    "canPurchase": false,
+    "canPurchase": true,
     "soldOut": false,
     "shine": 8,
     "faces": 14,
     "rarity": 7,
     "color": "#CCC",
     "images": [
-        "images/Ruby_logo.png"
+        "images/gem-image.jpeg"
     ],
     "reviews": [
         {
@@ -27,14 +27,14 @@
     "name": "Beach Rock",
     "price": 1.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    "canPurchase": false,
+    "canPurchase": true,
     "soldOut": false,
     "shine": 8,
     "faces": 14,
     "rarity": 7,
     "color": "#CCC",
     "images": [
-        "images/Ruby_logo.png"
+        "images/gem-image.jpeg"
     ],
     "reviews": [
         {
@@ -51,14 +51,14 @@
     "name": "Diamond",
     "price": 99.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    "canPurchase": false,
+    "canPurchase": true,
     "soldOut": false,
     "shine": 8,
     "faces": 14,
     "rarity": 7,
     "color": "#CCC",
     "images": [
-        "images/Ruby_logo.png"
+        "images/gem-image.jpeg"
     ],
     "reviews": [
         {
@@ -75,14 +75,14 @@
     "name": "Ruby",
     "price": 9.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    "canPurchase": false,
+    "canPurchase": true,
     "soldOut": false,
     "shine": 8,
     "faces": 14,
     "rarity": 7,
     "color": "#CCC",
     "images": [
-        "images/Ruby_logo.png"
+        "images/gem-image.jpeg"
     ],
     "reviews": [
         {
@@ -99,14 +99,14 @@
     "name": "Meteorite",
     "price": 1.95,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    "canPurchase": false,
+    "canPurchase": true,
     "soldOut": false,
     "shine": 8,
     "faces": 14,
     "rarity": 7,
     "color": "#CCC",
     "images": [
-        "images/Ruby_logo.png"
+        "images/gem-image.jpeg"
     ],
     "reviews": [
         {
