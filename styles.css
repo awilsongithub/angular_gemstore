@@ -25,15 +25,13 @@ body {
 }
 /*size the image container not img to maintain aspect ratio */
 #image-div {
-    width: 175px;
+    width: 225px;
     padding: 20px 20px 10px 0px;
 }
 #product-image {
     display: block;
     width: 100%;
     border-radius: 4px;
-
-
 }
 .nav-pills li a {
     /* pad a not li so whole tab clickable */

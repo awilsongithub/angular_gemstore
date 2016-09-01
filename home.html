@@ -1,4 +1,10 @@
-<!-- ANGULAR NOTES: SEE FLASHCARDS -->
+<!-- ANGULAR NOTES: SEE FLASHCARDS
+
+    run app with python -m SimpleHTTPServer to overcome cross-origin issue
+
+
+
+-->
 
 <!DOCTYPE html>
 <html ng-app='gemStore'>
@@ -40,6 +46,7 @@
                 <img id='product-image' class='flex-item' ng-src="{{product.images[0]}}" />
                 <caption>caption</caption>
             </div>
+
             <!-- TEXT -->
             <div class="flex-item">
                 <h3 class='pull-left'>{{product.name}}</h3>
