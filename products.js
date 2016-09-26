@@ -18,7 +18,7 @@
         };
     });
 
-    // productPanels directive
+    // productPanels directive. has a template and a controller called as panel.setTab etc. This is kind of a _VC design pattern.
     app.directive('productPanels', function(){
         return {
             restrict: 'E',
@@ -38,6 +38,7 @@
         };
     });
 
+    // review form directive. template has access to controller properties and methods via form._____
     app.directive('reviewForm', function(){
         return {
             restrict: 'E',
