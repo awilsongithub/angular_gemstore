@@ -7,7 +7,8 @@
     app.controller('StoreController', [ '$http', function($http){
         var store = this; // creat variable for controller so we can put data in a products variable belonging to it
         store.products = [ ];
-        $http.get('/products.json').success(function(data){
+        // $http.get('/products.json').success(function(data){
+         $http.get('products.json').success(function(data){
             console.log(data);
             store.products = data;
         });
