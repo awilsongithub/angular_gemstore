@@ -7,8 +7,14 @@
     app.controller('StoreController', [ '$http', function($http){
         var store = this; // creat variable for controller so we can put data in a products variable belonging to it
         store.products = [ ];
+
+        // IF RUNNING LOCALLY USE THIS PATH
         // $http.get('/products.json').success(function(data){
+
+        // IF RUNNING ON GITHUB PAGES USE THIS PATH
          $http.get('products.json').success(function(data){
+
+
             console.log(data);
             store.products = data;
         });
