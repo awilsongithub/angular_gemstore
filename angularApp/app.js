@@ -14,7 +14,6 @@
         // IF RUNNING ON GITHUB PAGES USE THIS PATH
         //  $http.get('products.json').success(function(data){
 
-
             console.log(data);
             store.products = data;
         });
