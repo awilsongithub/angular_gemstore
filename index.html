@@ -11,20 +11,20 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src='angular.min.js'></script>
-    <script type="text/javascript" src='jquery-1.6.2.min.js'></script>
-    <script type="text/javascript" src='app.js'></script>
-    <script type="text/javascript" src='products.js'></script>
-    <script type="text/javascript" src='scripts.js'></script>
+    <link rel="stylesheet" href="assets/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src='assets/libs/angular.min.js'></script>
+    <script type="text/javascript" src='assets/libs/jquery-1.6.2.min.js'></script>
+    <script type="text/javascript" src='angularApp/app.js'></script>
+    <script type="text/javascript" src='angularApp/products.js'></script>
+    <script type="text/javascript" src='assets/js/scripts.js'></script>
     <!-- note: scripts.js script tag at bottom of page.... -->
 </head>
 
 <body ng-controller="StoreController as store">
 
 <!-- NAVIGATION WITH SEARCH BOXES -->
-<nav role="navigation">
+<!-- <nav role="navigation">
   <div class="container">
      <h1>Flatlander</h1>
      <fieldset class='form-group'>
@@ -32,34 +32,108 @@
          <input id='nav-search-go' type="submit" class='btn btn-primary' value="Go">
      </fieldset>
   </div>
+</nav> -->
+
+<!-- NAVIGATION WITH SEARCH BOXES -->
+<nav role="navigation">
+  <div class="container">
+
+      <img src="assets/images/yelp_transparent.png" alt="" />
+
+      <!-- SEARCH FIELDS WITH BOOTSTRAP SYTLING -->
+      <form class="form-inline" >
+          <div class="form-group">
+              <label class='sr-only' for="searchField">Find i.e. tacos</label>
+              <input type="text" class='form-control my-nav-inputs' id="searchField" placeholder='Find i.e. tacos...'>
+          </div>
+          <div class="form-group">
+              <label class='sr-only' for="searchField">Near what location?</label>
+              <input type="text" class='form-control my-nav-inputs' id="searchField" placeholder='Near where?'>
+          </div>
+          <button type="submit" class='btn' id='my-btn'></button>
+      </form>
+
+
+
+      <!-- <form role="form">
+        <div class="form-group">
+          <input type="text" placeholder="Find ....">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Near (city or zip)" >
+        </div>
+        <button type="button" name="button"></button>
+        <br> -->
+
+        <!-- AVATAR DROPDOWN ACCOUNT MENU -->
+        <!-- <a href="#">
+            <button id='avatar-btn' class='nav-items'></button>
+            <button class='nav-items' name="button">
+                <i class='material-icons'>expand more</i>
+            </button>
+        </a> -->
+
+        <!-- MENU BELOW SEARCH BARS -->
+        <ul id='nav-menu'>
+            <a href="#"></a>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Write a Review</a></li>
+            <li><a href="#">Write a Review</a></li>
+            <li><a href="#">Find Friends</a></li>
+        </ul>
+      </form>
+  </div>
 </nav>
+
 
 <!-- MAIN CONTAINER -->
 <div class="container">
 
-    <!-- PRODUCTS LIST -->
-    <ul class='list-group'>
-        <li class='list-group-item flex-container' ng-repeat="product in store.products | orderBy:'price' | filter:search " ng-hide='product.soldOut'>
+    <div class="row">
 
-            <!-- IMAGE -->
-            <div id='image-div' class="flex-item">
-                <img id='product-image' class='flex-item' ng-src="{{product.images[0]}}" />
-                <caption>caption</caption>
-            </div>
+        <!-- PRODUCTS LIST -->
+        <div id='products-column' class='col-lg-6 col-md-6 col-sm-6'>
 
-            <!-- TEXT -->
-            <div class="flex-item">
-                <h3 class='pull-left'>{{product.name}}</h3>
-                <button id='add-to-cart-btn' class='pull-right btn' ng-show='product.canPurchase'>Add to Cart</button>
-                <p id='product-price'>{{product.price | currency}}</p>
+            <ul class='list-group'>
+                <li class='list-group-item flex-container' ng-repeat="product in store.products | orderBy:'price' | filter:search " ng-hide='product.soldOut'>
 
-                <!-- PANEL/TAB NAVIGATION -->
-                <product-panels></product-panels>
+                    <!-- IMAGE -->
+                    <div id='image-div' class="flex-item">
+                        <img id='product-image' class='flex-item' ng-src="{{product.images[0]}}" />
+                        <caption>caption</caption>
+                    </div>
 
-            </div>
+                    <!-- TEXT -->
+                    <div class="flex-item">
+                        <h3 class='pull-left'>{{product.name}}</h3>
+                        <button id='add-to-cart-btn' class='pull-right btn' ng-show='product.canPurchase'>Add to Cart</button>
+                        <p id='product-price'>{{product.price | currency}}</p>
 
-        </li>
-    </ul>
+                        <!-- PANEL/TAB NAVIGATION -->
+                        <product-panels></product-panels>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div> <!-- end products-column -->
+
+        <!-- MAP COLUMN -->
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div id='listings-map'>
+              <div id='map-info'>
+                  <i class="material-icons">keyboard_arrow_right</i>
+                  <a href="#">Less Map</a>
+              </div>
+              <div id='map-map'>
+
+              </div>
+          </div>
+        </div>
+
+    </div> <!-- end row -->
+
 
 </div>
 
