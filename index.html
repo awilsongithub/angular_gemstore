@@ -1,9 +1,5 @@
 <!-- ANGULAR NOTES: SEE FLASHCARDS
-
     run app with python -m SimpleHTTPServer to overcome cross-origin issue
-
-
-
 -->
 
 <!DOCTYPE html>
@@ -11,16 +7,27 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+
+
     <link rel="stylesheet" href="assets/libs/bootstrap.min.css">
+
+
+    <!-- FOR MAP -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMlHyX8GK8dd67VoG0IKRBHbwUu9o1nEY"></script>
+
+
+
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <script type="text/javascript" src='assets/libs/angular.min.js'></script>
     <script type="text/javascript" src='assets/libs/jquery-1.6.2.min.js'></script>
-    <script type="text/javascript" src='angularApp/app.js'></script>
-    <script type="text/javascript" src='angularApp/products.js'></script>
+    <script type="text/javascript" src='app.js'></script>
+    <script type="text/javascript" src='products.js'></script>
     <script type="text/javascript" src='assets/js/scripts.js'></script>
     <!-- note: scripts.js script tag at bottom of page.... -->
 
-    
+
 </head>
 
 <body ng-controller="StoreController as store">
@@ -123,13 +130,15 @@
 
         <!-- MAP COLUMN -->
         <div class="col-lg-6 col-md-6 col-sm-6">
-            <div id='listings-map'>
+            <div ng-controller='MapController' id='listings-map'>
               <div id='map-info'>
                   <i class="material-icons">keyboard_arrow_right</i>
                   <a href="#">Less Map</a>
               </div>
-              <div id='map-map'>
 
+              <!-- ANGULAR MAP GOES HERE -->
+              <div id='map'>
+                 <!-- omit marker buttons below map -->
               </div>
           </div>
         </div>

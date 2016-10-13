@@ -62,7 +62,14 @@ nav {
     background-color: #991C0F;
 }
 
-
+/* ====================================
+    MAP STYLING
+====================================== */
+#map {
+    width: 425px;
+    height: 425px;
+    background-color: grey;
+}
 
 .list-group-item {
     border-top: 1px solid #ddd;
