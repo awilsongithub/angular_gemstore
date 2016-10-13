@@ -16,13 +16,59 @@
 
             console.log(data);
             store.products = data;
-            sendDataToService(data);
+            sendDataToService(data); // so avail. in other ctrlrs
+
+
+
+            ////////////////////////////////////
+            // PASTED FROM MAPS CONTROLLER
+            ////////////////////////////////////
+
+            var productsData = productService.getProducts();
+            console.log(productsData);
+
+            var mapOptions = {
+              zoom: 4,
+              center: new google.maps.LatLng(25,80),
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            $scope.markers = [];
+            var infoWindow = new google.maps.InfoWindow();
+            var createMarker = function (info){
+                var marker = new google.maps.Marker({
+                    map: $scope.map,
+                    position: new google.maps.LatLng(info.lat, info.long),
+                    title: info.place
+                });
+                marker.content = '<div class="infoWindowContent">' + info.desc + '<br />' + info.lat + ' E,' + info.long +  ' N, </div>';
+
+                google.maps.event.addListener(marker, 'click', function(){
+                  infoWindow.setContent('<h2>' + marker.title + '</h2>' +
+                    marker.content);
+                  infoWindow.open($scope.map, marker);
+                });
+
+                $scope.markers.push(marker);
+            }  ;
+
+            for (i = 0; i < cities.length; i++){
+              createMarker(cities[i]);
+            }
+
+            $scope.openInfoWindow = function(e, selectedMarker){
+              e.preventDefault();
+              google.maps.event.trigger(selectedMarker, 'click');
+            };
+            // END STUFF PASTED FROM MAPS CONTROLLER 
+
+
 
         });
 
         function sendDataToService(x){
             console.log(x);
-            // var toyData = store.products;
             $scope.productData = productService.addProducts(x);
         }
 
@@ -73,41 +119,49 @@
     });
 
     // map controller
-    app.controller('MapController', function ($scope) {
-        var mapOptions = {
-          zoom: 4,
-          center: new google.maps.LatLng(25,80),
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
+    app.controller('MapController', function ($scope, productService) {
 
-        $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        $scope.markers = [];
-        var infoWindow = new google.maps.InfoWindow();
-        var createMarker = function (info){
-            var marker = new google.maps.Marker({
-                map: $scope.map,
-                position: new google.maps.LatLng(info.lat, info.long),
-                title: info.place
-            });
-            marker.content = '<div class="infoWindowContent">' + info.desc + '<br />' + info.lat + ' E,' + info.long +  ' N, </div>';
 
-            google.maps.event.addListener(marker, 'click', function(){
-              infoWindow.setContent('<h2>' + marker.title + '</h2>' +
-                marker.content);
-              infoWindow.open($scope.map, marker);
-            });
 
-            $scope.markers.push(marker);
-        }  ;
 
-        for (i = 0; i < cities.length; i++){
-          createMarker(cities[i]);
-        }
 
-        $scope.openInfoWindow = function(e, selectedMarker){
-          e.preventDefault();
-          google.maps.event.trigger(selectedMarker, 'click');
-        };
+        // var productsData = productService.getProducts();
+        // console.log(productsData);
+        //
+        // var mapOptions = {
+        //   zoom: 4,
+        //   center: new google.maps.LatLng(25,80),
+        //   mapTypeId: google.maps.MapTypeId.ROADMAP
+        // };
+        //
+        // $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        // $scope.markers = [];
+        // var infoWindow = new google.maps.InfoWindow();
+        // var createMarker = function (info){
+        //     var marker = new google.maps.Marker({
+        //         map: $scope.map,
+        //         position: new google.maps.LatLng(info.lat, info.long),
+        //         title: info.place
+        //     });
+        //     marker.content = '<div class="infoWindowContent">' + info.desc + '<br />' + info.lat + ' E,' + info.long +  ' N, </div>';
+        //
+        //     google.maps.event.addListener(marker, 'click', function(){
+        //       infoWindow.setContent('<h2>' + marker.title + '</h2>' +
+        //         marker.content);
+        //       infoWindow.open($scope.map, marker);
+        //     });
+        //
+        //     $scope.markers.push(marker);
+        // }  ;
+        //
+        // for (i = 0; i < cities.length; i++){
+        //   createMarker(cities[i]);
+        // }
+        //
+        // $scope.openInfoWindow = function(e, selectedMarker){
+        //   e.preventDefault();
+        //   google.maps.event.trigger(selectedMarker, 'click');
+        // };
     }); // end MapController
 
     var cities = [
