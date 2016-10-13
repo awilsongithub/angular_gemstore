@@ -9,10 +9,10 @@
         store.products = [ ];
 
         // IF RUNNING LOCALLY USE THIS PATH
-        $http.get('/products.json').success(function(data){
+        // $http.get('/products.json').success(function(data){
 
         // IF RUNNING ON GITHUB PAGES USE THIS PATH
-        //  $http.get('products.json').success(function(data){
+         $http.get('products.json').success(function(data){
 
             console.log(data);
             store.products = data;
@@ -61,7 +61,7 @@
               e.preventDefault();
               google.maps.event.trigger(selectedMarker, 'click');
             };
-            // END STUFF PASTED FROM MAPS CONTROLLER 
+            // END STUFF PASTED FROM MAPS CONTROLLER
 
 
 
