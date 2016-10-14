@@ -1,0 +1,666 @@
+[
+    {
+      "url": "https://www.yelp.com/biz/yuzu-sushi-and-robata-grill-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 929,
+      "name": "Yuzu Sushi & Robata Grill",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/XKKEnNY21K9CTETSxxCyRQ/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        },
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        }
+      ],
+      "id": "yuzu-sushi-and-robata-grill-chicago",
+      "coordinates": {
+        "latitude": 41.8956886,
+        "longitude": -87.6717159
+      },
+      "location": {
+        "address1": "1751 W Chicago Ave",
+        "country": "US",
+        "zip_code": "60622",
+        "state": "IL",
+        "address3": "",
+        "address2": null,
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+13126664100"
+    },
+    {
+      "url": "https://www.yelp.com/biz/kai-sushi-chicago-2?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 428,
+      "name": "Kai Sushi",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/NQV0RGaSOudnwn5fgWs5TQ/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "kai-sushi-chicago-2",
+      "coordinates": {
+        "latitude": 41.866433,
+        "longitude": -87.626953
+      },
+      "location": {
+        "address1": "1255 S State St",
+        "country": "US",
+        "zip_code": "60605",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+13125830567"
+    },
+    {
+      "url": "https://www.yelp.com/biz/friends-sushi-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 1005,
+      "name": "Friends Sushi",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/v9u25Q4iUrh3I8Mo_61NzA/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        },
+        {
+          "title": "Asian Fusion",
+          "alias": "asianfusion"
+        }
+      ],
+      "id": "friends-sushi-chicago",
+      "coordinates": {
+        "latitude": 41.895366,
+        "longitude": -87.625781
+      },
+      "location": {
+        "address1": "710 N Rush St",
+        "country": "US",
+        "zip_code": "60611",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+13127878998"
+    },
+    {
+      "url": "https://www.yelp.com/biz/kai-zan-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 590,
+      "name": "Kai Zan",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/EwNIvAUIuteBen6iqeTqhg/o.jpg",
+      "price": "$$$",
+      "categories": [
+        {
+          "title": "Asian Fusion",
+          "alias": "asianfusion"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        },
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        }
+      ],
+      "id": "kai-zan-chicago",
+      "coordinates": {
+        "latitude": 41.8955211098151,
+        "longitude": -87.6913475990295
+      },
+      "location": {
+        "address1": "2557 W Chicago Ave",
+        "country": "US",
+        "zip_code": "60622",
+        "state": "IL",
+        "address3": "",
+        "address2": null,
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17732785776"
+    },
+    {
+      "url": "https://www.yelp.com/biz/toro-sushi-chicago-3?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 988,
+      "name": "Toro Sushi",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ikHbU62971POYdlVxYrw-w/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        }
+      ],
+      "id": "toro-sushi-chicago-3",
+      "coordinates": {
+        "latitude": 41.92876,
+        "longitude": -87.64253
+      },
+      "location": {
+        "address1": "2546 N Clark St",
+        "country": "US",
+        "zip_code": "60614",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+17733487255"
+    },
+    {
+      "url": "https://www.yelp.com/biz/ora-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 359,
+      "name": "Ora",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/TxbEcj9kq9o3wMSvmlG_-A/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "ora-chicago",
+      "coordinates": {
+        "latitude": 41.9756393,
+        "longitude": -87.6679993
+      },
+      "location": {
+        "address1": "5143 N Clark St",
+        "country": "US",
+        "zip_code": "60640",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17735062978"
+    },
+    {
+      "url": "https://www.yelp.com/biz/wasabi-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 1151,
+      "name": "Wasabi",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/hPoYiNbK-JY6S3rAHEmPxw/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Ramen",
+          "alias": "ramen"
+        }
+      ],
+      "id": "wasabi-chicago",
+      "coordinates": {
+        "latitude": 41.919671,
+        "longitude": -87.691973
+      },
+      "location": {
+        "address1": "2115 N Milwaukee Ave",
+        "country": "US",
+        "zip_code": "60647",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+17732278180"
+    },
+    {
+      "url": "https://www.yelp.com/biz/lawrence-fish-market-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 622,
+      "name": "Lawrence Fish Market",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/D1hTwEE9HBICQUEwVRL-Vw/o.jpg",
+      "price": "$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        }
+      ],
+      "id": "lawrence-fish-market-chicago",
+      "coordinates": {
+        "latitude": 41.9683599,
+        "longitude": -87.72613
+      },
+      "location": {
+        "address1": "3914 W Lawrence Ave",
+        "country": "US",
+        "zip_code": "60625",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17732676838"
+    },
+    {
+      "url": "https://www.yelp.com/biz/sumo-sushi-and-hibachi-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 148,
+      "name": "Sumo Sushi and Hibachi",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ttGoigpgX1-g3tBT5m4WZA/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "sumo-sushi-and-hibachi-chicago",
+      "coordinates": {
+        "latitude": 41.9359375,
+        "longitude": -87.6444353
+      },
+      "location": {
+        "address1": "2936 N Broadway St",
+        "country": "US",
+        "zip_code": "60657",
+        "state": "IL",
+        "address3": "",
+        "address2": null,
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17734778510"
+    },
+    {
+      "url": "https://www.yelp.com/biz/nami-sushi-bar-chicago-2?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 59,
+      "name": "Nami Sushi Bar",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/6N2DC-npQrmuc-v3fbhBQA/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Asian Fusion",
+          "alias": "asianfusion"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "nami-sushi-bar-chicago-2",
+      "coordinates": {
+        "latitude": 41.9616349,
+        "longitude": -87.6754482
+      },
+      "location": {
+        "address1": "1828 W Montrose Ave",
+        "country": "US",
+        "zip_code": "60613",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+18722414407"
+    },
+    {
+      "url": "https://www.yelp.com/biz/coast-sushi-bar-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 1033,
+      "name": "Coast Sushi Bar",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/HenL5sqiMptbmx-siaaudA/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        }
+      ],
+      "id": "coast-sushi-bar-chicago",
+      "coordinates": {
+        "latitude": 41.9189215,
+        "longitude": -87.6774771
+      },
+      "location": {
+        "address1": "2045 N Damen Ave",
+        "country": "US",
+        "zip_code": "60647",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+17732355775"
+    },
+    {
+      "url": "https://www.yelp.com/biz/sushi-dokku-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 230,
+      "name": "Sushi Dokku",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/T4AzeiDqLECFw4yPN-RIlg/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "sushi-dokku-chicago",
+      "coordinates": {
+        "latitude": 41.8841737,
+        "longitude": -87.6484729
+      },
+      "location": {
+        "address1": "823 W Randolph St",
+        "country": "US",
+        "zip_code": "60607",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+13124558238"
+    },
+    {
+      "url": "https://www.yelp.com/biz/shiawase-restaurant-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 66,
+      "name": "Shiawase Restaurant",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/K98F2fmh7HCm10uIICG08w/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "shiawase-restaurant-chicago",
+      "coordinates": {
+        "latitude": 41.9439393,
+        "longitude": -87.6452853
+      },
+      "location": {
+        "address1": "3422 N Broadway St",
+        "country": "US",
+        "zip_code": "60657",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17738838888"
+    },
+    {
+      "url": "https://www.yelp.com/biz/taketei-chicago-3?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 104,
+      "name": "Taketei",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/L10dcI7Dnu89teJIAMl8eQ/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "taketei-chicago-3",
+      "coordinates": {
+        "latitude": 41.978042298549,
+        "longitude": -87.6584424776815
+      },
+      "location": {
+        "address1": "1111 W Berwyn Ave",
+        "country": "US",
+        "zip_code": "60640",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17737699292"
+    },
+    {
+      "url": "https://www.yelp.com/biz/blowfish-contemporary-sushi-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 158,
+      "name": "Blowfish Contemporary Sushi",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/x6jfttEVsBaf1QuRbV8H6w/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Ramen",
+          "alias": "ramen"
+        }
+      ],
+      "id": "blowfish-contemporary-sushi-chicago",
+      "coordinates": {
+        "latitude": 41.9836004823446,
+        "longitude": -87.6593112945557
+      },
+      "location": {
+        "address1": "1131 W Bryn Mawr Ave",
+        "country": "US",
+        "zip_code": "60660",
+        "state": "IL",
+        "address3": "",
+        "address2": null,
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17736543369"
+    },
+    {
+      "url": "https://www.yelp.com/biz/runa-japanese-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 229,
+      "name": "Runa Japanese",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/swzMXL5V4aX8FK6OPaSvRQ/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        },
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        }
+      ],
+      "id": "runa-japanese-chicago",
+      "coordinates": {
+        "latitude": 41.9103182940484,
+        "longitude": -87.6847123075727
+      },
+      "location": {
+        "address1": "2257 W North Ave",
+        "country": "US",
+        "zip_code": "60647",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+17732788887"
+    },
+    {
+      "url": "https://www.yelp.com/biz/hachis-kitchen-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 368,
+      "name": "Hachi's Kitchen",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/VE8PKzdECSpy9AERocuCMA/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "hachis-kitchen-chicago",
+      "coordinates": {
+        "latitude": 41.9273071289062,
+        "longitude": -87.6971435546875
+      },
+      "location": {
+        "address1": "2521 N California Ave",
+        "country": "US",
+        "zip_code": "60647",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+17732768080"
+    },
+    {
+      "url": "https://www.yelp.com/biz/earths-kitchen-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 20,
+      "name": "Earth's Kitchen",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/6Z-64Hlz7GavkZ3Kr1Kpcw/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        },
+        {
+          "title": "Asian Fusion",
+          "alias": "asianfusion"
+        }
+      ],
+      "id": "earths-kitchen-chicago",
+      "coordinates": {
+        "latitude": 41.9495682443371,
+        "longitude": -87.6493797451258
+      },
+      "location": {
+        "address1": "3715 N Halsted St",
+        "country": "US",
+        "zip_code": "60613",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4.5,
+      "phone": "+17736486000"
+    },
+    {
+      "url": "https://www.yelp.com/biz/umai-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 500,
+      "name": "Umai",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Z2XqFogVHVVD6UrxxTmHnQ/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        },
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Bars",
+          "alias": "bars"
+        }
+      ],
+      "id": "umai-chicago",
+      "coordinates": {
+        "latitude": 41.873,
+        "longitude": -87.630961
+      },
+      "location": {
+        "address1": "730 S Clark St",
+        "country": "US",
+        "zip_code": "60605",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+13129868888"
+    },
+    {
+      "url": "https://www.yelp.com/biz/rollapalooza-chicago?adjust_creative=HacxEkGBVuh4DnHSeY2ofQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=HacxEkGBVuh4DnHSeY2ofQ",
+      "review_count": 350,
+      "name": "Rollapalooza",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/uRZXKVCMEHp4nFS2Vj_ytw/o.jpg",
+      "price": "$$",
+      "categories": [
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi"
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese"
+        }
+      ],
+      "id": "rollapalooza-chicago",
+      "coordinates": {
+        "latitude": 41.94314,
+        "longitude": -87.64972
+      },
+      "location": {
+        "address1": "3344 N Halsted St",
+        "country": "US",
+        "zip_code": "60657",
+        "state": "IL",
+        "address3": "",
+        "address2": "",
+        "city": "Chicago"
+      },
+      "rating": 4,
+      "phone": "+17732816400"
+    }
+  ]

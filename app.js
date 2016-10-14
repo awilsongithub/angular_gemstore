@@ -12,24 +12,26 @@
         // $http.get('/products.json').success(function(data){
 
         // IF RUNNING ON GITHUB PAGES USE THIS PATH
-         $http.get('products.json').success(function(data){
+         $http.get('yelp.json').success(function(data){
 
             console.log(data);
             store.products = data;
             sendDataToService(data); // so avail. in other ctrlrs
 
+            // testing data access
+            console.log(store.products[0].coordinates.latitude);
 
 
             ////////////////////////////////////
             // PASTED FROM MAPS CONTROLLER
             ////////////////////////////////////
 
-            var productsData = productService.getProducts();
-            console.log(productsData);
+            // var productsData = productService.getProducts();
+            // console.log(productsData);
 
             var mapOptions = {
-              zoom: 4,
-              center: new google.maps.LatLng(25,80),
+              zoom: 11,
+              center: new google.maps.LatLng(41.8955211098151, -87.6913475990295), //  25,80
               mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
@@ -39,13 +41,13 @@
             var createMarker = function (info){
                 var marker = new google.maps.Marker({
                     map: $scope.map,
-                    position: new google.maps.LatLng(info.lat, info.long),
-                    title: info.place
+                    position: new google.maps.LatLng(info.coordinates.latitude, info.coordinates.longitude),
+                    title: info.name
                 });
-                marker.content = '<div class="infoWindowContent">' + info.desc + '<br />' + info.lat + ' E,' + info.long +  ' N, </div>';
+                marker.content = '<div class="infoWindowContent">' + info.location.address1 + '<br />' + info.location.city + ', ' + info.location.state + ' ' + info.location.zip_code + '</div>';
 
                 google.maps.event.addListener(marker, 'click', function(){
-                  infoWindow.setContent('<h2>' + marker.title + '</h2>' +
+                  infoWindow.setContent('<h2>' + info.name + '</h2>' +
                     marker.content);
                   infoWindow.open($scope.map, marker);
                 });
@@ -54,7 +56,7 @@
             }  ;
 
             for (i = 0; i < cities.length; i++){
-              createMarker(cities[i]);
+              createMarker(store.products[i]);
             }
 
             $scope.openInfoWindow = function(e, selectedMarker){
@@ -62,8 +64,6 @@
               google.maps.event.trigger(selectedMarker, 'click');
             };
             // END STUFF PASTED FROM MAPS CONTROLLER
-
-
 
         });
 
